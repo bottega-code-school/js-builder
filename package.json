@@ -1,0 +1,5 @@
+"bin": {
+
+  "generate": "./index.js"
+
+}
