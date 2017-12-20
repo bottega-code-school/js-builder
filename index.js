@@ -20,12 +20,7 @@ const QUESTIONS = [
       if (/^([A-Za-z\-\_\d])+$/.test(input)) return true;
       else return 'Project name may only include letters, numbers, underscores and hashes.';
     }
-  },
-//  {
-//    name: 'project-path',
-//    type: 'input',
-//    message: 'Project path:',
-//  }
+  }
 ];
 
 const CURR_DIR = process.cwd();

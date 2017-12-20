@@ -1,5 +1,10 @@
-"bin": {
+{
+  "name": "devcamp-js-builder",
+  "version": "1.0.0",
+  "description": "Generator for JavaScript projects",
+  "bin": {
 
-  "generate": "./index.js"
+    "generate": "./index.js"
 
+  }
 }
