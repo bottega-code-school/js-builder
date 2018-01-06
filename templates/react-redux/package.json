@@ -26,12 +26,15 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "babel-preset-stage-1": "^6.1.18",
+    "babel-preset-stage-1": "^6.24.1",
     "bootstrap": "^4.0.0-alpha.5",
     "css-loader": "^0.28.8",
     "react": "^16.2.0",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.2.0",
     "reactstrap": "^5.0.0-alpha.4",
-    "style-loader": "^0.19.1"
+    "style-loader": "^0.19.1",
+    "react-redux": "5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2"
   }
 }
