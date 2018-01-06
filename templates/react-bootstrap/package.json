@@ -1,0 +1,38 @@
+{
+  "name": "devcamp-react-bootstrap-starter",
+  "version": "1.0.0",
+  "description": "Basic skeleton codebase for React with Bootstrap applications.",
+  "main": "index.js",
+  "repository": "git@github.com:bottega-code-school/js-builder.git",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch"
+  },
+  "author": "Jordan Hudgens",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "chai": "^3.5.0",
+    "chai-jquery": "^2.0.0",
+    "jquery": "^2.2.1",
+    "jsdom": "^8.1.0",
+    "mocha": "^2.4.5",
+    "react-addons-test-utils": "^0.14.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "babel-preset-stage-1": "^6.24.1",
+    "bootstrap": "^4.0.0-alpha.5",
+    "css-loader": "^0.28.8",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reactstrap": "^5.0.0-alpha.4",
+    "style-loader": "^0.19.1",
+    "react-router": "^4.2.0"
+  }
+}
