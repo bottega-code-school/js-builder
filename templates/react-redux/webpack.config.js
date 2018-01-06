@@ -8,12 +8,17 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
+    loaders: [
+    {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader'
+    },
+    {
       exclude: /node_modules/,
       loader: 'babel',
       query: {
         presets: ['react', 'es2015', 'stage-1']
-      }
+      },
     }]
   },
   resolve: {
