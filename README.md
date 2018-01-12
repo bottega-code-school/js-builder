@@ -9,3 +9,8 @@
 
 - Change into the directory that you want to build the project in
 - Run the command `generate` into the terminal and follow the prompts
+
+
+### Deployment Options
+
+> The `react-bootstrap` and `react-redux` templates have the full configuration options set for deploying to Heroku.
