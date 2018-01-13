@@ -33,6 +33,9 @@
         "react-dom": "^16.0.0",
         "reactstrap": "^5.0.0-alpha.4",
         "style-loader": "^0.19.1",
-        "webpack": "^1.12.9"
+        "webpack": "^1.12.9",
+        "react-redux": "5.0.6",
+        "react-router": "^4.2.0",
+        "redux": "^3.7.2"
     }
 }
