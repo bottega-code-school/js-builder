@@ -1,11 +1,11 @@
 {
-  "name": "devcamp-js-builder",
-  "version": "1.1.1",
-  "description": "Generator for JavaScript projects",
-  "bin": {
-    "generate": "./index.js"
-  },
-  "dependencies": {
-    "inquirer": "^4.0.2"
-  }
+    "name": "devcamp-js-builder",
+    "version": "1.1.2",
+    "description": "Generator for JavaScript projects",
+    "bin": {
+        "js-generate": "./index.js"
+    },
+    "dependencies": {
+        "inquirer": "^4.0.2"
+    }
 }

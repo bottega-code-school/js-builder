@@ -7,7 +7,7 @@
 ### To create a new project
 
 - Change into the directory that you want to build the project in
-- Run the command `generate` into the terminal and follow the prompts
+- Run the command `js-generate` into the terminal and follow the prompts
 
 
 ### Deployment Options
