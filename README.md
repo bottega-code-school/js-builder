@@ -1,9 +1,8 @@
-# JavaScript Project Builder
+# DevCamp JavaScript Project Builder
 
 > This node module allows you to build skeleton JavaScript projects, to get started, follow these instructions:
 
-- Clone the repo
-- Inside of the directory, run `npm install -g` to install the library globally on your system, if that runs into an issue, you can run `sudo npm install -g -f`
+- Run `npm install devcamp-js-builder -g` to install the library globally on your system, if that runs into an issue, you can run `sudo npm install devcamp-js-builder -g -f`
 
 ### To create a new project
 
