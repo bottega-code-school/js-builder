@@ -1,6 +1,6 @@
 {
     "name": "devcamp-js-builder",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "description": "Generator for JavaScript projects",
     "bin": {
         "js-generate": "./index.js"
