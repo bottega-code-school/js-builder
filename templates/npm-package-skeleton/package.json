@@ -2,6 +2,12 @@
     "name": "npm-package-skeleton",
     "version": "1.0.0",
     "description": "Starter code for creating NPM Packages",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:bottega-code-school/js-builder.git"
+    },
+    "author": "Your Name Here",
+    "license": "MIT",
     "bin": {
         "js-generate": "./index.js"
     },

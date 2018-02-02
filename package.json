@@ -2,6 +2,12 @@
     "name": "devcamp-js-builder",
     "version": "1.2.8",
     "description": "Generator for JavaScript projects",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:bottega-code-school/js-builder.git"
+    },
+    "author": "Jordan Hudgens",
+    "license": "MIT",
     "bin": {
         "js-generate": "./index.js"
     },
