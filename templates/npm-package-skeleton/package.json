@@ -1,0 +1,10 @@
+{
+    "name": "npm-package-skeleton",
+    "version": "1.0.0",
+    "description": "Starter code for creating NPM Packages",
+    "bin": {
+        "js-generate": "./index.js"
+    },
+    "dependencies": {
+    }
+}
