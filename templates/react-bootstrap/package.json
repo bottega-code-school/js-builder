@@ -58,6 +58,7 @@
     "html-webpack-plugin": "^2.29.0",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
+    "prop-types": "^15.5.10",
     "react": "^16.2.0",
     "react-dom": "^16.0.0",
     "reactstrap": "^5.0.0-alpha.4",
