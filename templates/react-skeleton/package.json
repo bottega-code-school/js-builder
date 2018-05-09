@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:bottega-code-school/js-builder.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start": "webpack-dev-server --config webpack.config.js --watch"
   },
   "author": "Your Name Here",
   "license": "MIT",
