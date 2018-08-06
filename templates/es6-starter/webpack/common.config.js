@@ -1,13 +1,13 @@
 // webpack plugins
-const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+const SplitChunksPlugin = require('webpack/lib/optimize/SplitChunksPlugin');
 
 module.exports = {
 
   entry: {
-    'app': [
+    app: [
       './src/bootstrap.js'
     ],
-    'vendor': './src/vendor.js'
+    vendor: './src/vendor.js'
   },
 
   resolve: {
@@ -48,7 +48,7 @@ module.exports = {
   },
 
   plugins: [
-    new CommonsChunkPlugin({
+    new SplitChunksPlugin({
       name: ['app', 'vendor'],
       minChunks: Infinity
     })
