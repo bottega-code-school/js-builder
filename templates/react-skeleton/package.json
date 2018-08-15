@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:bottega-code-school/js-builder.git",
   "scripts": {
+    "preinstall": "npm set audit false",
     "start": "webpack-dev-server --config webpack.config.js --watch"
   },
   "author": "Your Name Here",
