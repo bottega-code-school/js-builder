@@ -2,5 +2,8 @@
   "presets": [
     "env"
   ],
-  "plugins": []
+  "plugins": [
+    "babel-plugin-transform-object-rest-spread",
+    "transform-class-properties"
+  ]
 }
