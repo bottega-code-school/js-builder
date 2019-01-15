@@ -4,7 +4,6 @@
   "description": "Basic skeleton codebase for React/Redux/Router applications.",
   "scripts": {
     "preinstall": "npm set audit false",
-    "postinstall": "cp env.example.js env.js",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
     "heroku-postbuild": "npm run build",
@@ -70,9 +69,10 @@
     "style-loader": "^0.21.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-middleware": "^3.1.3",
-    "webpack-dev-server": "^3.1.5",
+    "webpack-dev-server": "3.1.5",
     "webpack-hot-middleware": "^2.22.3",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack": "^4.16.4"
   },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -80,7 +80,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.16.4"
+    "uglifyjs-webpack-plugin": "^1.2.7"
   }
 }
