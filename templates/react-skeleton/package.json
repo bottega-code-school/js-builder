@@ -23,7 +23,7 @@
   "dependencies": {
     "ajv": "6.0.0",
     "babel-preset-stage-1": "6.24.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react": "16.8.0",
+    "react-dom": "16.8.0"
   }
 }
