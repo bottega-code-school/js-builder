@@ -3,7 +3,7 @@ const SplitChunksPlugin = require("webpack/lib/optimize/SplitChunksPlugin");
 
 module.exports = {
   entry: {
-    app: ["./src/bootstrap.js"],
+    app: ["./src/bootstrap.tsx"],
     vendor: "./src/vendor.js"
   },
 
