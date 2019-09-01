@@ -46,7 +46,8 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "clean-webpack-plugin": "3.0.0",
+    "braces": ">=2.3.1",
+    "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "5.0.4",
     "cross-env": "5.2.1",
     "css-loader": "^1.0.0",
@@ -82,6 +83,6 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "source-map-loader": "^0.2.4",
     "typescript": "3.6.2",
-    "uglifyjs-webpack-plugin": "2.2.0"
+    "uglifyjs-webpack-plugin": "^1.2.7"
   }
 }
