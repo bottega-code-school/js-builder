@@ -12,6 +12,6 @@
     "js-generate": "./index.js"
   },
   "dependencies": {
-    "inquirer": "^4.0.2"
+    "inquirer": "7.0.1"
   }
 }
