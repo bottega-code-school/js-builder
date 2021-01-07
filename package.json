@@ -1,6 +1,6 @@
 {
   "name": "devcamp-js-builder",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Generator for JavaScript projects",
   "repository": {
     "type": "git",
