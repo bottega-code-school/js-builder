@@ -1,6 +1,5 @@
 const path = require("path");
 const webpackMerge = require("webpack-merge");
-const autoprefixer = require("autoprefixer");
 const webpackCommon = require("./common.config");
 
 // webpack plugins
@@ -15,18 +14,15 @@ const LoaderOptionsPlugin = require("webpack/lib/LoaderOptionsPlugin");
 module.exports = webpackMerge(webpackCommon, {
   bail: true,
 
-  devtool: "source-map",
   mode: "production",
   output: {
     path: path.resolve(__dirname, "../dist"),
 
     filename: "[name]-[hash].min.js",
 
-    sourceMapFilename: "[name]-[hash].map",
-
     chunkFilename: "[id]-[chunkhash].js",
 
-    publicPath: "/"
+    publicPath: "/",
   },
 
   module: {
@@ -39,31 +35,31 @@ module.exports = webpackMerge(webpackCommon, {
             {
               loader: "css-loader",
               options: {
-                sourceMap: true,
-                importLoaders: 2
-              }
+                sourceMap: false,
+                importLoaders: 2,
+              },
             },
             {
               loader: "postcss-loader",
               options: {
                 config: {
-                  path: path.resolve(__dirname, "postcss.config.js")
+                  path: path.resolve(__dirname, "postcss.config.js"),
                 },
-                sourceMap: true
-              }
+                sourceMap: false,
+              },
             },
             {
               loader: "sass-loader",
               options: {
                 outputStyle: "expanded",
-                sourceMap: true,
-                sourceMapContents: true
-              }
-            }
-          ]
-        })
-      }
-    ]
+                sourceMap: false,
+                sourceMapContents: false,
+              },
+            },
+          ],
+        }),
+      },
+    ],
   },
 
   plugins: [
@@ -81,45 +77,45 @@ module.exports = webpackMerge(webpackCommon, {
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true
-      }
+        minifyURLs: true,
+      },
     }),
     new CopyWebpackPlugin([{ from: path.resolve(__dirname, "../static") }], {
-      ignore: ["index.html", "favicon.ico"]
+      ignore: ["index.html", "favicon.ico"],
     }),
     new CleanWebpackPlugin(["dist"], {
       root: path.resolve(__dirname, ".."),
-      exclude: ".gitignore"
+      exclude: ".gitignore",
     }),
     new DefinePlugin({
       "process.env": {
-        NODE_ENV: '"production"'
-      }
+        NODE_ENV: '"production"',
+      },
     }),
     new ExtractTextPlugin("[name]-[chunkhash].min.css"),
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
           ie8: true,
-          warnings: false
+          warnings: false,
         },
         mangle: {
-          ie8: true
+          ie8: true,
         },
         output: {
           comments: false,
-          ie8: true
-        }
+          ie8: true,
+        },
       },
-      sourceMap: true
+      sourceMap: false,
     }),
     new LoaderOptionsPlugin({
       options: {
         context: "/",
         sassLoader: {
-          includePaths: [path.resolve(__dirname, "../src")]
-        }
-      }
-    })
-  ]
+          includePaths: [path.resolve(__dirname, "../src")],
+        },
+      },
+    }),
+  ],
 });

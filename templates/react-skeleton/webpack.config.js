@@ -3,7 +3,7 @@ module.exports = {
   output: {
     path: __dirname,
     publicPath: "/",
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   mode: "development",
   module: {
@@ -12,20 +12,20 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel",
         query: {
-          presets: ["react", "es2015", "stage-1"]
-        }
-      }
-    ]
+          presets: ["react", "es2015", "stage-1"],
+        },
+      },
+    ],
   },
   resolve: {
     extensions: [".js", ".jsx"],
-    modules: ["node_modules"]
+    modules: ["node_modules"],
   },
   resolveLoader: {
-    moduleExtensions: ["-loader"]
+    moduleExtensions: ["-loader"],
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: "./"
-  }
+    contentBase: "./",
+  },
 };
