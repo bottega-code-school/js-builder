@@ -14,11 +14,14 @@ const LoaderOptionsPlugin = require("webpack/lib/LoaderOptionsPlugin");
 module.exports = webpackMerge(webpackCommon, {
   bail: true,
 
+  devtool: "source-map",
   mode: "production",
   output: {
     path: path.resolve(__dirname, "../dist"),
 
     filename: "[name]-[hash].min.js",
+
+    sourceMapFilename: "[name]-[hash].map",
 
     chunkFilename: "[id]-[chunkhash].js",
 
@@ -35,7 +38,8 @@ module.exports = webpackMerge(webpackCommon, {
             {
               loader: "css-loader",
               options: {
-                sourceMap: false,
+                minimize: true,
+                sourceMap: true,
                 importLoaders: 2,
               },
             },
@@ -45,15 +49,15 @@ module.exports = webpackMerge(webpackCommon, {
                 config: {
                   path: path.resolve(__dirname, "postcss.config.js"),
                 },
-                sourceMap: false,
+                sourceMap: true,
               },
             },
             {
               loader: "sass-loader",
               options: {
                 outputStyle: "expanded",
-                sourceMap: false,
-                sourceMapContents: false,
+                sourceMap: true,
+                sourceMapContents: true,
               },
             },
           ],
@@ -107,7 +111,7 @@ module.exports = webpackMerge(webpackCommon, {
           ie8: true,
         },
       },
-      sourceMap: false,
+      sourceMap: true,
     }),
     new LoaderOptionsPlugin({
       options: {

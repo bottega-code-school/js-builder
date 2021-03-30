@@ -1,7 +1,7 @@
 {
   "name": "devcamp-js-builder",
-  "version": "1.6.2",
-  "description": "Generator for JavaScript projects",
+  "version": "1.6.3",
+  "description": "Generator for JavaScript and TypeScript projects",
   "repository": {
     "type": "git",
     "url": "git@github.com:bottega-code-school/js-builder.git"

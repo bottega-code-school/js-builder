@@ -4,25 +4,35 @@ const SplitChunksPlugin = require("webpack/lib/optimize/SplitChunksPlugin");
 module.exports = {
   entry: {
     app: ["./src/bootstrap.tsx"],
-    vendor: "./src/vendor.js"
+    vendor: "./src/vendor.js",
   },
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".scss"],
 
-    modules: ["node_modules"]
+    modules: ["node_modules"],
   },
 
   devtool: "source-map",
 
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+      {
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
+      },
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ["babel-loader"],
       },
 
       {
@@ -31,21 +41,21 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[path][name].[ext]",
-          publicPath: "/"
-        }
+          publicPath: "/",
+        },
       },
 
       {
         test: /\.(mp4|webm)$/,
-        loader: "url?limit=10000"
-      }
-    ]
+        loader: "url?limit=10000",
+      },
+    ],
   },
 
   plugins: [
     new SplitChunksPlugin({
       name: ["app", "vendor"],
-      minChunks: Infinity
-    })
-  ]
+      minChunks: Infinity,
+    }),
+  ],
 };
